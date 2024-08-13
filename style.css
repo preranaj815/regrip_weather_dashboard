@@ -1,0 +1,113 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: smaller;
+    background-image: url('./sky-background-video-conferencing_23-2148623068.avif'); /* Path to background image */
+    background-size: cover; /* Ensuring the image covers the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #000;  
+}
+
+.container {
+    background: transparent; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#cityInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+#cityInput:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+#searchButton {
+    padding: 10px 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#searchButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.weather-info {
+    display: none; /* Hide initially */
+    transition: background-color 0.5s ease-in-out;
+     
+}
+
+.weather-info.show {
+    display: block; /* Show when data is available */
+    background-color:transparent;  
+}
+
+.weather-info p {
+    margin-bottom: 10px;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+.toggle-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#unitToggle {
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.loading-spinner {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 5px solid #007BFF;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
