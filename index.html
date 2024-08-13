@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Dashboard</h1>
+        <div class="search-container">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button id="searchButton">Get Weather</button>
+        </div>
+        <div class="toggle-container">
+            <label for="unitToggle">Temperature Unit:</label>
+            <select id="unitToggle">
+                <option value="metric" selected>Celsius</option>
+                <option value="imperial">Fahrenheit</option>
+            </select>
+        </div>
+        <div id="weatherInfo" class="weather-info">
+            <!-- Weather data will be displayed here -->
+        </div>
+        <div id="loadingSpinner" class="loading-spinner">
+            <!-- Spinner animation -->
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
