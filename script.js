@@ -1,5 +1,5 @@
  $(document).ready(function() {
-    const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY'; // OpenWeatherMap API key
+    const apiKey = window.WEATHER_API_KEY || ''; // set in config.js (gitignored)
     const apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
     // Function to display weather data
