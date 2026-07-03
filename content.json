@@ -1,0 +1,77 @@
+{
+  "brand": "Prerana Jain",
+  "meta": {
+    "title": "Prerana Jain — Frontend & Data/ML Engineer",
+    "description": "Portfolio of Prerana Jain — frontend developer moving into data, ML, and system design."
+  },
+  "hero": {
+    "eyebrow": "Frontend · Data/ML · Systems",
+    "titleHtml": "Hi, I'm Prerana — I build clean interfaces and I'm going <span class=\"accent\">deeper into data &amp; systems</span>.",
+    "lead": "I started out as a frontend developer and now work across data and machine learning too. Lately I'm drawn to system design and the architecture behind good data engineering."
+  },
+  "about": {
+    "paragraphs": [
+      "My path started on the frontend — turning designs into fast, accessible interfaces. Over time I got pulled toward what happens behind the UI: the data, the models, and the systems that make products actually work at scale.",
+      "Today I split my time between building interfaces and working on data and ML problems. To do the data-engineering side well, I keep studying system design and architecture — how to move data reliably, model it sensibly, and keep things maintainable.",
+      "I like work that connects both worlds: a thoughtful interface on top of a well-designed system."
+    ],
+    "facts": [
+      { "label": "Focus", "value": "Frontend · Data/ML · System design" },
+      { "label": "Currently learning", "value": "Data engineering & architecture" },
+      { "label": "Location", "value": "India" },
+      { "label": "Open to", "value": "Collaboration & new roles" }
+    ]
+  },
+  "skills": [
+    { "group": "Frontend", "items": ["HTML", "CSS", "JavaScript", "React", "Responsive UI", "Accessibility"] },
+    { "group": "Data & ML", "items": ["Python", "Pandas", "NumPy", "scikit-learn", "SQL", "Data viz"] },
+    { "group": "Systems & Data Eng", "items": ["System design", "APIs", "ETL / pipelines", "Databases", "Architecture"] },
+    { "group": "Tools", "items": ["Git", "VS Code", "Linux", "Cloud basics"] }
+  ],
+  "featured": {
+    "tag": "Featured · Live demo",
+    "title": "Weather Dashboard",
+    "desc": "A responsive weather app that fetches live data from the OpenWeatherMap API, with unit switching, loading states, and graceful error handling. Try it right here →",
+    "tech": ["JavaScript", "jQuery", "REST API", "CSS"],
+    "links": [ { "label": "Source code", "url": "#" } ]
+  },
+  "projects": [
+    {
+      "title": "Data pipeline / ETL",
+      "desc": "A short description of a data engineering project — what it ingests, transforms, and where it lands.",
+      "tech": ["Python", "SQL", "Pipelines"],
+      "links": [
+        { "label": "Source", "url": "#" },
+        { "label": "Demo", "url": "#" }
+      ]
+    },
+    {
+      "title": "ML model / notebook",
+      "desc": "Describe a model you trained — the problem, the approach, and the result or metric you're proud of.",
+      "tech": ["scikit-learn", "Pandas", "Analysis"],
+      "links": [
+        { "label": "Source", "url": "#" },
+        { "label": "Write-up", "url": "#" }
+      ]
+    },
+    {
+      "title": "Frontend project",
+      "desc": "A UI you built — the goal, the stack, and anything notable about performance, accessibility, or design.",
+      "tech": ["React", "CSS", "UI"],
+      "links": [
+        { "label": "Source", "url": "#" },
+        { "label": "Live", "url": "#" }
+      ]
+    }
+  ],
+  "contact": {
+    "title": "Let's build something.",
+    "lead": "Have a role, a project, or just want to talk data and interfaces? I'd love to hear from you.",
+    "email": "preranaj815@gmail.com"
+  },
+  "socials": [
+    { "label": "GitHub", "url": "https://github.com/preranaj815" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/prerana-jain-b29480199/" },
+    { "label": "preranaj815@gmail.com", "url": "mailto:preranaj815@gmail.com" }
+  ]
+}

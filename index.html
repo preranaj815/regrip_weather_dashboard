@@ -3,31 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
+    <title data-edit="meta.title">Prerana Jain — Frontend & Data/ML Engineer</title>
+    <meta name="description" data-edit-attr="meta.description" content="Portfolio of Prerana Jain — frontend developer moving into data, ML, and system design.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Weather Dashboard</h1>
-        <div class="search-container">
-            <input type="text" id="cityInput" placeholder="Enter city name">
-            <button id="searchButton">Get Weather</button>
+    <!-- ===================== NAV ===================== -->
+    <header class="nav" id="nav">
+        <div class="nav__inner">
+            <a href="#top" class="nav__brand" data-edit="brand">Prerana&nbsp;Jain</a>
+
+            <nav class="nav__links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#work">Work</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav__actions">
+                <button id="themeToggle" class="icon-btn" aria-label="Toggle color theme" title="Toggle theme">
+                    <span class="icon-btn__sun">☀</span>
+                    <span class="icon-btn__moon">☾</span>
+                </button>
+                <button id="menuToggle" class="icon-btn menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
-        <div class="toggle-container">
-            <label for="unitToggle">Temperature Unit:</label>
-            <select id="unitToggle">
-                <option value="metric" selected>Celsius</option>
-                <option value="imperial">Fahrenheit</option>
-            </select>
+    </header>
+
+    <main id="top">
+        <!-- ===================== HERO ===================== -->
+        <section class="hero">
+            <div class="wrap">
+                <p class="hero__eyebrow reveal" data-edit="hero.eyebrow">Frontend&nbsp;·&nbsp;Data/ML&nbsp;·&nbsp;Systems</p>
+                <h1 class="hero__title reveal" data-edit-html="hero.titleHtml"></h1>
+                <p class="hero__lead reveal" data-edit="hero.lead"></p>
+                <div class="hero__cta reveal">
+                    <a href="#work" class="btn btn--primary">View my work</a>
+                    <a href="#contact" class="btn btn--ghost">Get in touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== ABOUT ===================== -->
+        <section class="section" id="about">
+            <div class="wrap">
+                <p class="section__kicker reveal">01 — About</p>
+                <div class="about">
+                    <div class="about__text reveal" id="aboutParas" data-list="about.paragraphs"></div>
+                    <aside class="about__facts reveal">
+                        <dl id="aboutFacts" data-list="about.facts"></dl>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SKILLS ===================== -->
+        <section class="section section--alt" id="skills">
+            <div class="wrap">
+                <p class="section__kicker reveal">02 — Skills</p>
+                <div class="skills" id="skillsList" data-list="skills"></div>
+                <p class="skills__note reveal">Tune these to match exactly what you work with — keep it honest.</p>
+            </div>
+        </section>
+
+        <!-- ===================== WORK ===================== -->
+        <section class="section" id="work">
+            <div class="wrap">
+                <p class="section__kicker reveal">03 — Selected work</p>
+
+                <!-- Featured project: the live weather dashboard -->
+                <article class="project project--featured reveal">
+                    <div class="project__info">
+                        <span class="project__tag" data-edit="featured.tag">Featured · Live demo</span>
+                        <h3 class="project__title" data-edit="featured.title">Weather Dashboard</h3>
+                        <p class="project__desc" data-edit="featured.desc"></p>
+                        <ul class="tags tags--sm" id="featuredTech" data-list="featured.tech"></ul>
+                        <div class="project__links" id="featuredLinks" data-list="featured.links"></div>
+                    </div>
+
+                    <!-- Live, interactive weather widget (driven by script.js) -->
+                    <div class="weather">
+                        <div class="weather__controls">
+                            <input type="text" id="cityInput" placeholder="Enter a city…" aria-label="City name">
+                            <button id="searchButton">Search</button>
+                        </div>
+                        <div class="weather__unit">
+                            <label for="unitToggle">Units</label>
+                            <select id="unitToggle">
+                                <option value="metric" selected>Celsius</option>
+                                <option value="imperial">Fahrenheit</option>
+                            </select>
+                        </div>
+                        <div id="loadingSpinner" class="loading-spinner"></div>
+                        <div id="weatherInfo" class="weather-info"></div>
+                    </div>
+                </article>
+
+                <!-- Other projects (rendered from content) -->
+                <div class="projects-grid" id="projectsList" data-list="projects"></div>
+            </div>
+        </section>
+
+        <!-- ===================== CONTACT ===================== -->
+        <section class="section section--alt" id="contact">
+            <div class="wrap contact">
+                <p class="section__kicker reveal">04 — Contact</p>
+                <h2 class="contact__title reveal" data-edit="contact.title">Let's build something.</h2>
+                <p class="contact__lead reveal" data-edit="contact.lead"></p>
+                <a class="btn btn--primary reveal" id="emailBtn" href="#">Email me</a>
+                <div class="contact__socials reveal" id="socialsList" data-list="socials"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap footer__inner">
+            <span>© <span id="year"></span> <span data-edit="brand">Prerana Jain</span></span>
+            <a href="#top" class="link">Back to top ↑</a>
         </div>
-        <div id="weatherInfo" class="weather-info">
-            <!-- Weather data will be displayed here -->
-        </div>
-        <div id="loadingSpinner" class="loading-spinner">
-            <!-- Spinner animation -->
-        </div>
+    </footer>
+
+    <!-- ===================== ADMIN TOOLBAR (hidden until login) ===================== -->
+    <div id="adminBar" class="admin-bar" hidden>
+        <span class="admin-bar__badge">Admin</span>
+        <span class="admin-bar__hint" id="adminHint">Viewing</span>
+        <button class="admin-bar__btn" id="editBtn">Edit</button>
+        <button class="admin-bar__btn" id="exportBtn">Export content.json</button>
+        <button class="admin-bar__btn admin-bar__btn--muted" id="resetBtn" title="Discard local edits and reload published content">Discard local</button>
+        <button class="admin-bar__btn admin-bar__btn--muted" id="logoutBtn">Exit admin</button>
     </div>
+
+    <!-- Seed content: used when opened directly as a file (file://), where fetch() is blocked.
+         When deployed (http/Netlify) the loader prefers the real content.json instead. -->
+    <script type="application/json" id="seedContent">
+    {
+      "brand": "Prerana Jain",
+      "meta": {
+        "title": "Prerana Jain — Frontend & Data/ML Engineer",
+        "description": "Portfolio of Prerana Jain — frontend developer moving into data, ML, and system design."
+      },
+      "hero": {
+        "eyebrow": "Frontend · Data/ML · Systems",
+        "titleHtml": "Hi, I'm Prerana — I build clean interfaces and I'm going <span class=\"accent\">deeper into data &amp; systems</span>.",
+        "lead": "I started out as a frontend developer and now work across data and machine learning too. Lately I'm drawn to system design and the architecture behind good data engineering."
+      },
+      "about": {
+        "paragraphs": [
+          "My path started on the frontend — turning designs into fast, accessible interfaces. Over time I got pulled toward what happens behind the UI: the data, the models, and the systems that make products actually work at scale.",
+          "Today I split my time between building interfaces and working on data and ML problems. To do the data-engineering side well, I keep studying system design and architecture — how to move data reliably, model it sensibly, and keep things maintainable.",
+          "I like work that connects both worlds: a thoughtful interface on top of a well-designed system."
+        ],
+        "facts": [
+          { "label": "Focus", "value": "Frontend · Data/ML · System design" },
+          { "label": "Currently learning", "value": "Data engineering & architecture" },
+          { "label": "Location", "value": "India" },
+          { "label": "Open to", "value": "Collaboration & new roles" }
+        ]
+      },
+      "skills": [
+        { "group": "Frontend", "items": ["HTML", "CSS", "JavaScript", "React", "Responsive UI", "Accessibility"] },
+        { "group": "Data & ML", "items": ["Python", "Pandas", "NumPy", "scikit-learn", "SQL", "Data viz"] },
+        { "group": "Systems & Data Eng", "items": ["System design", "APIs", "ETL / pipelines", "Databases", "Architecture"] },
+        { "group": "Tools", "items": ["Git", "VS Code", "Linux", "Cloud basics"] }
+      ],
+      "featured": {
+        "tag": "Featured · Live demo",
+        "title": "Weather Dashboard",
+        "desc": "A responsive weather app that fetches live data from the OpenWeatherMap API, with unit switching, loading states, and graceful error handling. Try it right here →",
+        "tech": ["JavaScript", "jQuery", "REST API", "CSS"],
+        "links": [ { "label": "Source code", "url": "#" } ]
+      },
+      "projects": [
+        {
+          "title": "Data pipeline / ETL",
+          "desc": "A short description of a data engineering project — what it ingests, transforms, and where it lands.",
+          "tech": ["Python", "SQL", "Pipelines"],
+          "links": [ { "label": "Source", "url": "#" }, { "label": "Demo", "url": "#" } ]
+        },
+        {
+          "title": "ML model / notebook",
+          "desc": "Describe a model you trained — the problem, the approach, and the result or metric you're proud of.",
+          "tech": ["scikit-learn", "Pandas", "Analysis"],
+          "links": [ { "label": "Source", "url": "#" }, { "label": "Write-up", "url": "#" } ]
+        },
+        {
+          "title": "Frontend project",
+          "desc": "A UI you built — the goal, the stack, and anything notable about performance, accessibility, or design.",
+          "tech": ["React", "CSS", "UI"],
+          "links": [ { "label": "Source", "url": "#" }, { "label": "Live", "url": "#" } ]
+        }
+      ],
+      "contact": {
+        "title": "Let's build something.",
+        "lead": "Have a role, a project, or just want to talk data and interfaces? I'd love to hear from you.",
+        "email": "preranaj815@gmail.com"
+      },
+      "socials": [
+        { "label": "GitHub", "url": "https://github.com/preranaj815" },
+        { "label": "LinkedIn", "url": "https://www.linkedin.com/in/prerana-jain-b29480199/" },
+        { "label": "preranaj815@gmail.com", "url": "mailto:preranaj815@gmail.com" }
+      ]
+    }
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
+    <script src="portfolio.js"></script>
 </body>
 </html>
